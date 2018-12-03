@@ -1,4 +1,4 @@
-package com.manuflowers.moviefinder
+package com.manuflowers.moviefinder.ui.home
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

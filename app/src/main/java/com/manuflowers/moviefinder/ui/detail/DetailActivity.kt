@@ -1,4 +1,4 @@
-package com.manuflowers.moviefinder
+package com.manuflowers.moviefinder.ui.detail
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
