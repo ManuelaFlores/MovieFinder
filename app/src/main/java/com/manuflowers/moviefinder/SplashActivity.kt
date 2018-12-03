@@ -2,19 +2,14 @@ package com.manuflowers.moviefinder
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import kotlinx.android.synthetic.main.activity_detail2.*
+import kotlinx.android.synthetic.main.activity_home.*
 
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-     //   setContentView(R.layout.activity_splash)
-        setContentView(R.layout.activity_detail2)
-        setSupportActionBar(toolbar)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        //   setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_home)
+        setSupportActionBar(HomeToolbar)
     }
 }
