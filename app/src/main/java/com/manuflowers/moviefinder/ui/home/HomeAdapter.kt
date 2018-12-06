@@ -8,9 +8,12 @@ import com.manuflowers.moviefinder.R
 import com.manuflowers.moviefinder.ui.model.Result
 import kotlinx.android.synthetic.main.item_search_result.view.*
 
-class HomeAdapter(val items: List<Result>): RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+class HomeAdapter(
+    val items: List<Result>,
+    val onItemClickListener: (Int) -> Unit
+) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_result,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_result, parent, false)
         return HomeViewHolder(view)
     }
 
@@ -23,5 +26,11 @@ class HomeAdapter(val items: List<Result>): RecyclerView.Adapter<HomeAdapter.Hom
 
     }
 
-    class HomeViewHolder(view: View) : RecyclerView.ViewHolder(view)
+    inner class HomeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        init {
+            itemView.setOnClickListener {
+                onItemClickListener(adapterPosition)
+            }
+        }
+    }
 }

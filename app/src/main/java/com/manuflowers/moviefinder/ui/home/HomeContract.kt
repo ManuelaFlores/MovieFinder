@@ -7,12 +7,13 @@ interface HomeContract {
      * BasePresenter layer.
      */
 
-    interface  View {
+    interface View {
+
         fun showLoading()
 
         fun hideLoading()
 
-        fun onSuccesfull(list:List<Result>)
+        fun onSuccesfull(list: List<Result>)
 
         fun showErrorService(errorMessage: String)
 
@@ -24,10 +25,10 @@ interface HomeContract {
     }
 
     interface Callback {
-        fun onErrorService(code:String)
+        fun onErrorService(code: String)
 
         fun onFailureService(failureMessage: String?)
 
-        fun onSuccessful(list:List<Result>)
+        fun onSuccessful(list: List<Result>)
     }
 }

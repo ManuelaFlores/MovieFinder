@@ -16,17 +16,4 @@ object OMDbApiManager {
             .build()
         return client.create<OMDbApi>(OMDbApi::class.java)
     }
-
-
-    /*
-    * fun getRetrofit(): OMDbApi {
-
-        val okHttpClient = OkHttpClient.Builder().build()
-        val client = Retrofit.Builder()
-                .baseUrl(BuildConfig.BASE_URL)
-                .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-        return client.create<OMDbApi>(OMDbApi::class.java)
-    }*/
 }
