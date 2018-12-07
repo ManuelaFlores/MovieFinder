@@ -2,14 +2,12 @@
 <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent">
 
-    <!-- android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" -->
     <android.support.design.widget.AppBarLayout
             android:id="@+id/app_bar"
-            android:fitsSystemWindows="true"
             android:background="@null"
             android:theme="@style/AppTheme.AppBarOverlay"
             android:layout_height="@dimen/app_bar_height"
@@ -18,22 +16,21 @@
 
         <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/toolbar_layout"
-                android:fitsSystemWindows="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:expandedTitleGravity="top"
                 app:contentScrim="?attr/colorPrimary">
             <RelativeLayout
                     android:background="@color/colorPrimaryLight"
-                    android:layout_gravity="center"
-                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fitsSystemWindows="true">
+                    android:layout_height="match_parent">
                 <ImageView
-                        android:layout_width="200dp"
+                        android:id="@+id/ivPosterDetail"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/monsta_1"
+                        tools:src="@drawable/monsta_1"
+                        android:scaleType="centerCrop"
                         android:layout_gravity="center"
                         android:contentDescription="@null"
                         app:layout_collapseParallaxMultiplier="0.5"
@@ -45,8 +42,7 @@
                     android:id="@+id/toolbar"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_width="match_parent"
-                    app:layout_collapseMode="pin"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                    app:layout_collapseMode="pin" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>

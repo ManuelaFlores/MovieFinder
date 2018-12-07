@@ -1,11 +1,12 @@
 package com.manuflowers.moviefinder.ui.detail
 
+import com.manuflowers.moviefinder.ui.model.DetailOfMovie
 import com.manuflowers.moviefinder.ui.model.Result
 
 interface DetailContract {
 
     interface View {
-        fun onSuccesfull(result: Result)
+        fun onSuccesfull(detailOfMovie: DetailOfMovie)
         fun showErrorService(errorMessage: String)
         fun showFailureMessage(failureMessage: String?)
     }
@@ -17,6 +18,6 @@ interface DetailContract {
     interface CallBack{
         fun onErrorService(code: String)
         fun onFailureService(failureMessage: String?)
-        fun onSuccessFul(result : Result)
+        fun onSuccessFul(detailOfMovie: DetailOfMovie)
     }
 }

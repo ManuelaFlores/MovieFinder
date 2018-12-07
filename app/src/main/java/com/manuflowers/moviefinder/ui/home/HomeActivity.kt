@@ -73,6 +73,9 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
     private fun populateRecyclerView(@NonNull list: List<Result>) {
         rvSearchResult.adapter = HomeAdapter(list) {
             val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("overview", list[it].overview)
+            intent.putExtra("poster", list[it].poster_path)
+            intent.putExtra("title", list[it].title)
             startActivity(intent)
         }
     }

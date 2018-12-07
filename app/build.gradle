@@ -18,13 +18,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField ("String", "BASE_URL", "\"https://api.themoviedb.org/\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/\"")
             buildConfigField("String", "URL_SEARCH_MOVIE", "\"/3/search/movie\"")
+            buildConfigField("String", "URL_DETAIL_MOVIE", " \"/3/movie/\"")
         }
 
         debug {
-            buildConfigField ("String", "BASE_URL", "\"https://api.themoviedb.org/\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/\"")
             buildConfigField("String", "URL_SEARCH_MOVIE", "\"/3/search/movie\"")
+            buildConfigField("String", "URL_DETAIL_MOVIE", " \"/3/movie/\"")
         }
     }
 }
@@ -43,4 +45,9 @@ dependencies {
     //REST Services Libraries
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation('com.squareup.picasso:picasso:2.71828') {
+        exclude group: 'com.android.support', module: 'animated-vector-drawable'
+        exclude group: 'com.android.support', module: 'exifinterface'
+    }
 }

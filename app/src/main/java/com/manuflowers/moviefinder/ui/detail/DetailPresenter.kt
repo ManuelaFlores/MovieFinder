@@ -1,12 +1,13 @@
 package com.manuflowers.moviefinder.ui.detail
 
+import com.manuflowers.moviefinder.ui.model.DetailOfMovie
 import com.manuflowers.moviefinder.ui.model.Result
 
 class DetailPresenter(
     private val viewInterface: DetailContract.View
 ): DetailContract.CallBack, DetailContract.Presenter {
-    override fun requestResult(query: String?) {
-        DetailInteractor().makeRequest(query!!,this)
+    override fun requestResult(movie_id: String?) {
+        DetailInteractor().makeRequest(movie_id,this)
     }
 
     override fun onErrorService(code: String) {
@@ -17,9 +18,7 @@ class DetailPresenter(
         viewInterface.showFailureMessage(failureMessage)
     }
 
-    override fun onSuccessFul(result: Result) {
-        viewInterface.onSuccesfull(result)
+    override fun onSuccessFul(detailOfMovie: DetailOfMovie) {
+        viewInterface.onSuccesfull(detailOfMovie)
     }
-
-
 }
