@@ -58,14 +58,14 @@
                 android:textSize="14dp"
                 android:textColor="@android:color/black"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="14dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="0dp"
                 android:layout_below="@+id/tvDirectorName"
                 android:layout_toStartOf="@+id/ivPosterFilm"
                 android:layout_marginRight="8dp"
-                android:layout_marginEnd="134dp"
+                android:layout_marginEnd="14dp"
                 android:layout_toLeftOf="@+id/ivPosterFilm"
                 android:layout_marginBottom="8dp"/>
 
